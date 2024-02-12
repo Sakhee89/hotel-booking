@@ -2,10 +2,11 @@ import React from "react";
 import { auth, signIn, signOut } from "@/auth";
 import Image from "next/image";
 import Link from "next/link";
+import { Session } from "next-auth";
 
 type Props = {};
 
-function SignOut() {
+function SignOut(): React.JSX.Element {
   return (
     <form
       action={async () => {
@@ -18,7 +19,7 @@ function SignOut() {
   );
 }
 const Header = async (props: Props) => {
-  const session = await auth();
+  const session: Session | null = await auth();
   console.log(session);
   return (
     <header className="flex justify-end">
