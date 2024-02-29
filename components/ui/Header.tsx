@@ -20,14 +20,14 @@ function SignOut(): React.JSX.Element {
 }
 const Header = async (props: Props) => {
   const session: Session | null = await auth();
-  console.log(session);
   return (
-    <header className="flex justify-end">
+    <header>
       <div>
         {session?.user ? (
-          <div>
+          <div className="flex items-center">
             {session.user.name && session.user.image && (
               <Image
+                className="mr-5 rounded-full"
                 src={session.user.image}
                 alt={session.user.name}
                 width={32}
