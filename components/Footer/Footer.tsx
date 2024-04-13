@@ -14,14 +14,14 @@ export const Footer = () => {
 
         <div className="flex flex-wrap gap-16 items-center justify-between">
           <div className="flex-1">
-            <p>123 Road</p>
+            <p>123 street</p>
             <div className="flex items-center py-4">
               <BsFillSendFill />
               <p className="ml-2">HotelApp</p>
             </div>
             <div className="flex items-center">
               <BsTelephoneOutbound />
-              <p className="ml-2">000-000-00</p>
+              <p className="ml-2">08001234567</p>
             </div>
             <div className="flex items-center pt-4">
               <BiMessageDetail />
