@@ -1,1 +1,5 @@
-This is my personal website created using JavaScript and React.js
+## Hotel Booking App
+
+Sanity.io
+React image icons
+Next Auth

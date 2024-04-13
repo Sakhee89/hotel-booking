@@ -3,6 +3,7 @@ import { auth, signIn, signOut } from "@/auth";
 import Image from "next/image";
 import Link from "next/link";
 import { Session } from "next-auth";
+import { FaUserCircle } from "react-icons/fa";
 
 type Props = {};
 
@@ -21,7 +22,7 @@ function SignOut(): React.JSX.Element {
 const Header = async (props: Props) => {
   const session: Session | null = await auth();
   return (
-    <header>
+    <header className="py-10 px-4 container mx-auto text-xl flex flex-wrap md:flex-nowrap items-center justify-between">
       <div>
         {session?.user ? (
           <div className="flex items-center">
@@ -38,7 +39,9 @@ const Header = async (props: Props) => {
           </div>
         ) : (
           <Link href="/api/auth/signin">
-            <button>Sign in</button>
+            <button>
+              <FaUserCircle className="cursor-pointer" />
+            </button>
           </Link>
         )}
       </div>
